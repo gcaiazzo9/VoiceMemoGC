@@ -8,14 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var dati = Categories()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        
+        
+        NavigationStack {
+            
+            
+            List{
+                
+                ForEach (dati.categoryArray){category in
+                    NavigationLink (destination: (RecordingView())){
+                        HStack{
+                            Image(systemName: category.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:20)
+                                .foregroundStyle(category.color)
+                            Text(category.name)
+                                
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Voice Memos")
+            .toolbar {
+                Button (action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("Edit")
+                })
+                
+                
+            }
         }
-        .padding()
+        
+        
     }
 }
 

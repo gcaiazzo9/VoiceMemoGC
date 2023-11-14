@@ -1,0 +1,19 @@
+//
+//  CategoryClass.swift
+//  VoiceMemoGC
+//
+//  Created by Giorgio Caiazzo on 14/11/23.
+//
+
+import Foundation
+import SwiftUI
+
+@Observable class Categories{
+    
+    var categoryArray: [recordCategory] = [
+    
+        recordCategory(name: "All Recordings", image: "waveform"), recordCategory(name: "Recently Deleted", image: "trash")
+    
+    ]
+    
+}
