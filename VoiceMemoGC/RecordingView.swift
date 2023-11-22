@@ -28,6 +28,9 @@ struct SheetView: View {
    
     @Environment(\.dismiss) var dismiss
     @Binding var musicRecording : VoiceViewModel
+    @State private var someState = true
+    @Binding var timeRemaining : Double
+    var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
     
@@ -89,15 +92,17 @@ struct SheetView: View {
             
             VStack {
                 
-                Text ("Your Sound Name Here")
+                Text ("New Recording")
                     .font(.title2)
-                    .fontWeight(.medium)
+                    .fontWeight(.bold)
                     .padding(.top)
                 
-                Text  ("00:00,00")
-                    .font(.subheadline)
-                    .foregroundStyle(Color.gray)
-                
+               
+                    Text("\(timeRemaining, specifier: "%.2f")")
+                        .foregroundStyle(Color.gray)
+                        .onReceive(timer) { time in
+                            timeRemaining += 0.01
+                         }
                 
                 HStack {
                     
@@ -137,7 +142,7 @@ struct SheetView: View {
                         .animation(animation.speed(0.3), value: drawingHeight)
                     
                     
-                } 
+                }   
                     .frame(width: 150)
                     .onAppear{
                         drawingHeight.toggle()
@@ -147,7 +152,7 @@ struct SheetView: View {
                 
                 Button(action: {
                     
-                   
+                    timeRemaining=0
                     musicRecording.stopRecording()
                     fetchLastRecording(name: ("New Recording"), color: .black)
                     
@@ -189,6 +194,7 @@ struct RecordingView: View {
     
     
     @State private var musicRecording = VoiceViewModel ()
+    @State private var timeRemaining = 0.00
     
     
 
@@ -280,9 +286,9 @@ struct RecordingView: View {
                             if (record == true) {
                                 musicRecording.startRecording()
                             } else {
-//                                timeRemaining=0
+                                
                                 musicRecording.audioRecorder.pause()
-//                                showPopUp=true
+
                             }
                             
                         }, label: {
@@ -299,7 +305,7 @@ struct RecordingView: View {
                             }
                         })
                         .sheet(isPresented: $showingSheet) {
-                            SheetView(record: $record, showingSheet: self.$showingSheet, records: $records, musicRecording: $musicRecording)
+                            SheetView(record: $record, showingSheet: self.$showingSheet, records: $records, musicRecording: $musicRecording, timeRemaining: $timeRemaining)
                         }
                         
                     }
@@ -396,7 +402,7 @@ struct RecordingView: View {
                                     }
                                     
                                 }, label: {
-                                    Image (systemName: play ? "pause.fill" : "play.fill")
+                                    Image (systemName: recordedSound.isPlaying ? "pause.fill" : "play.fill")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width:27)
@@ -497,7 +503,7 @@ struct RecordingView: View {
                                 }
                             })
                             .sheet(isPresented: $showingSheet) {
-                                SheetView(record: $record, showingSheet: self.$showingSheet, records: $records, musicRecording: $musicRecording)
+                                SheetView(record: $record, showingSheet: self.$showingSheet, records: $records, musicRecording: $musicRecording, timeRemaining: $timeRemaining)
                             }
                             
                         } .offset(y:40)
