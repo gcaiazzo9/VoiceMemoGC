@@ -11,14 +11,27 @@ import SwiftUI
 struct recordCategory: Identifiable{
     var id: UUID = UUID()
     var name: String = "category name"
-    var image: String = "category image"
+    var image: String = "folder"
     var color: Color = .blue
+    var number: String = "0"
     
 }
 
-struct recording : Identifiable {
+@Observable class recording: Identifiable {
     
     var id: UUID = UUID ()
-    var name: String = "recording name"
-    var image: String = "recording image"
+    var name: String = "New Recording"
+    var fileURL: URL
+    var isPlaying : Bool = false
+    
+    
+    init(name: String, fileURL: URL) {
+        
+        self.name = name
+        self.fileURL = fileURL
+        
+    }
+   
 }
+
+

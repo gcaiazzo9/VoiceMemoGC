@@ -12,8 +12,13 @@ import SwiftUI
     
     var categoryArray: [recordCategory] = [
     
-        recordCategory(name: "All Recordings", image: "waveform"), recordCategory(name: "Recently Deleted", image: "trash")
+        recordCategory(name: "All Recordings", image: "waveform", number: "2"), recordCategory(name: "Recently Deleted", image: "trash", number: "0")
     
     ]
     
+    var personalCategoryArray: [recordCategory] = [
+    
+   
+    
+    ]
 }

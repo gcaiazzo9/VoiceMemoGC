@@ -7,22 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5411235F2B0538A4008DF603 /* RecordingFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5411235E2B0538A4008DF603 /* RecordingFunc.swift */; };
+		541123612B0538E0008DF603 /* RecordingDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541123602B0538E0008DF603 /* RecordingDatas.swift */; };
+		541123632B053916008DF603 /* RecordingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541123622B053916008DF603 /* RecordingStruct.swift */; };
 		544C08AF2B02C59800BC94E6 /* VoiceMemoGCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C08AE2B02C59800BC94E6 /* VoiceMemoGCApp.swift */; };
 		544C08B12B02C59800BC94E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C08B02B02C59800BC94E6 /* ContentView.swift */; };
 		544C08B32B02C59900BC94E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544C08B22B02C59900BC94E6 /* Assets.xcassets */; };
 		544C08B72B02C59900BC94E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544C08B62B02C59900BC94E6 /* Preview Assets.xcassets */; };
+		546D383B2B065A9500672AC8 /* RecordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D383A2B065A9500672AC8 /* RecordCardView.swift */; };
+		549740B12B042F33006E1B4C /* RecordingVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549740B02B042F33006E1B4C /* RecordingVisualizer.swift */; };
 		54C4347E2B037DBA0011A725 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4347D2B037DBA0011A725 /* RecordingView.swift */; };
 		54C434802B037E970011A725 /* CategoriesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4347F2B037E970011A725 /* CategoriesStruct.swift */; };
 		54C434822B03AA1E0011A725 /* CategoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C434812B03AA1E0011A725 /* CategoryClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5411235E2B0538A4008DF603 /* RecordingFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingFunc.swift; sourceTree = "<group>"; };
+		541123602B0538E0008DF603 /* RecordingDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDatas.swift; sourceTree = "<group>"; };
+		541123622B053916008DF603 /* RecordingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingStruct.swift; sourceTree = "<group>"; };
 		544C08AB2B02C59800BC94E6 /* VoiceMemoGC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemoGC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		544C08AE2B02C59800BC94E6 /* VoiceMemoGCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoGCApp.swift; sourceTree = "<group>"; };
 		544C08B02B02C59800BC94E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		544C08B22B02C59900BC94E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		544C08B42B02C59900BC94E6 /* VoiceMemoGC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoiceMemoGC.entitlements; sourceTree = "<group>"; };
 		544C08B62B02C59900BC94E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		546D383A2B065A9500672AC8 /* RecordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCardView.swift; sourceTree = "<group>"; };
+		549740B02B042F33006E1B4C /* RecordingVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingVisualizer.swift; sourceTree = "<group>"; };
 		54C4347D2B037DBA0011A725 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		54C4347F2B037E970011A725 /* CategoriesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesStruct.swift; sourceTree = "<group>"; };
 		54C434812B03AA1E0011A725 /* CategoryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClass.swift; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 				54C4347D2B037DBA0011A725 /* RecordingView.swift */,
 				54C4347F2B037E970011A725 /* CategoriesStruct.swift */,
 				54C434812B03AA1E0011A725 /* CategoryClass.swift */,
+				549740B02B042F33006E1B4C /* RecordingVisualizer.swift */,
+				5411235E2B0538A4008DF603 /* RecordingFunc.swift */,
+				541123602B0538E0008DF603 /* RecordingDatas.swift */,
+				541123622B053916008DF603 /* RecordingStruct.swift */,
+				546D383A2B065A9500672AC8 /* RecordCardView.swift */,
 				544C08B22B02C59900BC94E6 /* Assets.xcassets */,
 				544C08B42B02C59900BC94E6 /* VoiceMemoGC.entitlements */,
 				544C08B52B02C59900BC94E6 /* Preview Content */,
@@ -149,10 +164,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C434802B037E970011A725 /* CategoriesStruct.swift in Sources */,
+				541123612B0538E0008DF603 /* RecordingDatas.swift in Sources */,
+				549740B12B042F33006E1B4C /* RecordingVisualizer.swift in Sources */,
 				54C434822B03AA1E0011A725 /* CategoryClass.swift in Sources */,
 				544C08B12B02C59800BC94E6 /* ContentView.swift in Sources */,
+				5411235F2B0538A4008DF603 /* RecordingFunc.swift in Sources */,
 				544C08AF2B02C59800BC94E6 /* VoiceMemoGCApp.swift in Sources */,
 				54C4347E2B037DBA0011A725 /* RecordingView.swift in Sources */,
+				541123632B053916008DF603 /* RecordingStruct.swift in Sources */,
+				546D383B2B065A9500672AC8 /* RecordCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +306,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = recording;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -324,6 +345,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = recording;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
