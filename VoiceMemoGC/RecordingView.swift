@@ -148,6 +148,7 @@ struct SheetView: View {
                         drawingHeight.toggle()
                     }
                     .padding(5)
+                    .accessibilityHidden(true)
                 
                 
                 Button(action: {
@@ -174,7 +175,7 @@ struct SheetView: View {
                                                         .frame (width: 25)
                                                         .foregroundStyle(Color.red)
                                                 }
-                })
+                }) .accessibilityLabel("Stop Recording Button")
                 
             }
             
@@ -261,6 +262,7 @@ struct RecordingView: View {
                         .frame(width:55)
                         .foregroundStyle(Color.gray)
                         .padding(10)
+                        .accessibilityHidden(true)
                     Text ("No Recordings")
                         .font(.title2)
                         .bold()
@@ -302,10 +304,11 @@ struct RecordingView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame (width: 55)
                                     .foregroundStyle(Color.red)
-                            }
+                            } .accessibilityLabel("Record")
                         })
                         .sheet(isPresented: $showingSheet) {
                             SheetView(record: $record, showingSheet: self.$showingSheet, records: $records, musicRecording: $musicRecording, timeRemaining: $timeRemaining)
+                                
                         }
                         
                     }
@@ -346,13 +349,17 @@ struct RecordingView: View {
                                 
                                 Spacer()
                                 
-                                Image (systemName: "ellipsis.circle")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundStyle(Color.blue)
-                                    .frame(width: 25)
-                                    .offset(x:10,y:-10)
-                                
+                                Button (action: {
+                                    
+                                    
+                                }, label: {
+                                    Image (systemName: "ellipsis.circle")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .foregroundStyle(Color.blue)
+                                        .frame(width: 25)
+                                        .offset(x:10,y:-10)
+                                })
                             }    .padding(.horizontal)
                             
                             
@@ -375,20 +382,30 @@ struct RecordingView: View {
                             
                             HStack {
                                 
-                                Image (systemName: "slider.horizontal.3")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width:22)
-                                    .foregroundStyle(Color.blue)
-                                    .offset(x:-50)
                                 
+                                Button (action: {
+                                    
+                                    
+                                }, label: {
+                                    Image (systemName: "slider.horizontal.3")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width:22)
+                                        .foregroundStyle(Color.blue)
+                                        .offset(x:-50)
+                                })
                                 
-                                
+                                Button (action: {
+                                    
+                                    
+                                    
+                                }, label: {
                                 Image (systemName: "gobackward.15")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 23)
                                     .padding(.horizontal)
+                                        })
                                 Button(action: {
                                     
                                     recordedSound.isPlaying.toggle()
@@ -409,11 +426,16 @@ struct RecordingView: View {
                                         .padding(.horizontal)
                                 })
                                 
-                                Image (systemName: "goforward.15")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 23)
-                                    .padding(.horizontal)
+                                Button (action: {
+                                    
+                                    
+                                }, label: {
+                                    Image (systemName: "goforward.15")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 23)
+                                        .padding(.horizontal)
+                                })
                                 
                                 
                                 Button(action: {

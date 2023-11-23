@@ -50,7 +50,7 @@ struct ContentView: View {
                                 .foregroundStyle(Color.blue)
                             Text("Recently Deleted")
                                 .padding(.horizontal,5)
-                        } .badge("0")
+                        } .badge(prova.sounds.count)
                     }
                     
                     
